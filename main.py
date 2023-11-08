@@ -1,22 +1,22 @@
---1
--- create or replace function summa_products()
--- returns integer as $$
--- begin
---     return (select sum(price) from supermarket_products);
--- end;
--- $$ language plpgsql;
+1
+ create or replace function summa_products()
+ returns integer as $$
+begin
+     return (select sum(price) from supermarket_products);
+ end;
+ $$ language plpgsql;
 
--- select summa_products()
+ select summa_products()
 
---2
---   create or replace function average_products()
---   returns integer as $$
---  begin
---       return (select avg(price) from supermarket_products);
---   end;
---   $$ language plpgsql;
+2
+  create or replace function average_products()
+   returns integer as $$
+  begin
+       return (select avg(price) from supermarket_products);
+   end;
+   $$ language plpgsql;
 
---   select average_products()
+   select average_products()
 
 
 --3
